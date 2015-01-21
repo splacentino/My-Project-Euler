@@ -1,22 +1,23 @@
 package project.euler
 
-object ThirdAdjProd {
+object FourAdjDigit {
   def main(args : Array[String]) =  {
-    Console println thirdAdjProd("12345", 4)
+    Console println fourAdjDigit("12345", 4)
   }
 
-  def thirdAdjProd(numbers : String, digits : Int): Int = {
-    def thirdAdjRec(prod : Int, max : Int, pos : Int, ptr : Int): Int = {
+  def fourAdjDigit(numbers : String, digits : Int): Int = {
+    def fourAdjRec(prod : Int, max : Int, pos : Int, ptr : Int): Int = {
       Console println ("Prod = " + prod 
         + " Max = " + max 
         + " Pos = " + pos
         + " Ptr = " + ptr)
       if (pos + digits > numbers.length) max
       else if ((pos + ptr) % digits == 0)
-        thirdAdjRec(
+        42 // fourdAdjRec()
+      else 42
     }
     if (numbers.length > 0) 
-      thirdAdjRec(numbers(0).asDigit, 0, 0, 1)
+      fourAdjRec(numbers(0).asDigit, 0, 0, 1)
     else throw new Error
       /* else if (ptr % digits < 1) 
         thirdAdjRec(numbers(pos + 1).asDigit, 
