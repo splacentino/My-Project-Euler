@@ -1,5 +1,3 @@
-package project.euler
-
 object Pascal {
 
   def main(args: Array[String]) {
