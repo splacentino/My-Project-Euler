@@ -4,8 +4,8 @@
   * Recursivity as much as possible  
 
 ## Progress  
-  * |_1_| **DONE**
-  * |_.._|
-  * |_.._|
-  * |_7_| **DONE**
-  * |_8_| **WORK IN PROGRESS**
+  * |1| **DONE**
+  * |..|
+  * |..|
+  * |7| _Firsts prime_ **DONE**
+  * |8| _Four adjacent digits_ **WORK IN PROGRESS**
