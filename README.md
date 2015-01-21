@@ -8,4 +8,4 @@
   * |..|
   * |..|
   * |7| _Firsts prime_ **DONE**
-  * |8| _Four adjacent digits_ **WORK IN PROGRESS**
+  * |8| [_Four adjacent digits_](FourAdjDigit.scala) **WORK IN PROGRESS**
