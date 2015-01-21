@@ -1,5 +1,6 @@
 # My-Project-Euler  
   * Language : Scala
+  ![SCALA](http://www.scala-lang.org/resources/img/scala-small-logo.png)
   * Recursivity as much as possible  
 
 ## Progress  
