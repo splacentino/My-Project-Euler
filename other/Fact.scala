@@ -1,5 +1,3 @@
-package project.euler
-
 import scala.annotation.tailrec
 
 object Fact {
@@ -12,10 +10,9 @@ object Fact {
 
   def factorial (n: Int) = {
     @tailrec
-    def facto(a : Int, acc: Int): Int = {
-      if (a == 0) /* throw new Exception */ acc
+    def facto(a : Int, acc: Int): Int =
+      if (a == 0) acc
       else facto(a - 1, a * acc)
-    }
     facto(n, 1)
   }
 }
