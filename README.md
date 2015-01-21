@@ -7,5 +7,5 @@
   * |1| **DONE**
   * |..|
   * |..|
-  * |7| _Firsts prime_ **DONE**
-  * |8| [_Four adjacent digits_](FourAdjDigit.scala) **WORK IN PROGRESS**
+  * |7| Firsts prime **DONE**
+  * |8| [Four adjacent digits](FourAdjDigit.scala) **WORK IN PROGRESS**
