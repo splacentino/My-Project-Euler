@@ -1,7 +1,8 @@
 # My-Project-Euler  
   * Language : Scala
   ![SCALA](http://www.scala-lang.org/resources/img/scala-small-logo.png)
-  * Recursivity as much as possible  
+  * Recursivity as much as possible
+  * "Please Github, pimp my code !" 
 
 ## Progress  
   * |1| [Multiples of 3 and 5](Mult.scala)**DONE**
