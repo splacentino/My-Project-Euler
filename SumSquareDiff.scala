@@ -1,5 +1,7 @@
 package project.euler
 
+import scala.annotation.tailrec
+
 object SumSquareDiff {
   def main(args : Array[String]) = {
     if(args.length > 0 && args(0).matches("\\d+"))
@@ -9,10 +11,9 @@ object SumSquareDiff {
   }
 
   def sumSquare(n : Int) = {
-    def sumSquareRec(a: Int, sq: Int, acc: Int): Int = {
+    @tailrec def sumSquareRec(a: Int, sq: Int, acc: Int): Int =
       if(a > n) ((acc * acc) - sq)
       else sumSquareRec(a + 1, (sq + (a * a)), acc + a)
-    }
 
     sumSquareRec(1, 0, 0)
   }

@@ -1,5 +1,7 @@
 package project.euler
 
+import scala.annotation.tailrec
+
 object SmallestMultiple {
 
   def main(args: Array[String]) = {
@@ -10,11 +12,11 @@ object SmallestMultiple {
   }
 
   def smallestMultiple(n: Int) = {
-    def smallestRec(a: Int, dv: Int): Int = {
-      if(dv == n && a % dv == 0) a
-      else if(a % dv != 0) smallestRec(a + 1, 1)
+    @tailrec def smallestRec(a: Int, dv: Int): Int =
+      if (dv == n && a % dv == 0) a
+      else if (a % dv != 0) smallestRec(a + 1, 1)
       else smallestRec(a, dv + 1)
-    }
+    
     smallestRec(n, 2)
   }
 }

@@ -22,6 +22,6 @@ object FirstsPrime {
       else if(primes.forall(x => a % x != 0)) firstsPrimeRec(a + 1, a :: primes)
       else firstsPrimeRec(a + 1, primes)
     
-    if(n > 0) firstsPrimeRec(2, Nil) else throw new Exception
+      if(n > 0) firstsPrimeRec(2, Nil) else throw new Exception
   }
 }
