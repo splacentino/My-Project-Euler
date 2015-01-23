@@ -1,33 +1,49 @@
 package project.euler
 
+import scala.annotation.tailrec
+
+/**
+ * I know, using file.. 
+ * \\o \\oo// o// \o\o//
+ */
 object FourAdjDigit {
   def main(args : Array[String]) =  {
-    Console println fourAdjDigit("12345", 4)
+    Console println
+    fourAdjDigit("73167176531330624919225119674426574742355349194934"
+      +"96983520312774506326239578318016984801869478851843"
+      +"85861560789112949495459501737958331952853208805511"
+      +"12540698747158523863050715693290963295227443043557"
+      +"66896648950445244523161731856403098711121722383113"
+      +"62229893423380308135336276614282806444486645238749"
+      +"30358907296290491560440772390713810515859307960866"
+      +"70172427121883998797908792274921901699720888093776"
+      +"65727333001053367881220235421809751254540594752243"
+      +"52584907711670556013604839586446706324415722155397"
+      +"53697817977846174064955149290862569321978468622482"
+      +"83972241375657056057490261407972968652414535100474"
+      +"82166370484403199890008895243450658541227588666881"
+      +"16427171479924442928230863465674813919123162824586"
+      +"17866458359124566529476545682848912883142607690042"
+      +"24219022671055626321111109370544217506941658960408"
+      +"07198403850962455444362981230987879927244284909188"
+      +"84580156166097919133875499200524063689912560717606"
+      +"05886116467109405077541002256983155200055935729725"
+      +"71636269561882670428252483600823257530420752963450", 13)
+    //Console println fourAdjDigit("555512345", 4)
   }
 
-  def fourAdjDigit(numbers : String, digits : Int): Int = {
-    def fourAdjRec(prod : Int, max : Int, pos : Int, ptr : Int): Int = {
-      Console println ("Prod = " + prod 
-        + " Max = " + max 
-        + " Pos = " + pos
-        + " Ptr = " + ptr)
+  def fourAdjDigit(numbers : String, digits : Int): BigInt = {
+    @tailrec
+    def fourAdjRec(prod : BigInt, max : BigInt, pos : Int, ptr : Int): BigInt =
       if (pos + digits > numbers.length) max
-      else if ((pos + ptr) % digits == 0)
-        42 // fourdAdjRec()
-      else 42
-    }
+      else if (ptr % digits == 0)
+        fourAdjRec(numbers(pos + 1).asDigit, prod max max , pos + 1, 1)
+      else 
+        fourAdjRec(prod * numbers(pos + ptr).asDigit, max, pos, ptr + 1)
+     
     if (numbers.length > 0) 
       fourAdjRec(numbers(0).asDigit, 0, 0, 1)
-    else throw new Error
-      /* else if (ptr % digits < 1) 
-        thirdAdjRec(numbers(pos + 1).asDigit, 
-          if(prod > max) prod else max,
-          pos + 1,
-        pos + 2
-        )
-      else thirdAdjRec(numbers(ptr).asDigit * prod, max, pos, ptr + 1)
-    }*/
-
-    //thirdAdjRec(0, 0, -1, 0)
+    else 
+      throw new Error
   }
 }

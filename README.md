@@ -11,4 +11,5 @@
   * |5| [Smallest multiple](SmallestMultiple.scala) **DONE**
   * |6| [Sum square difference](SumSquareDiff.scala) **DONE**
   * |7| [10001st prime](FirstsPrime.scala) **DONE**
-  * |8| [Largest product in a series](FourAdjDigit.scala) **WORK IN PROGRESS**
+  * |8| [Largest product in a series](FourAdjDigit.scala) **DONE**
+  * |9| [Special Pythagorean triplet](PythagoreanTriplet.scala) **WORK IN PROGRESS**
