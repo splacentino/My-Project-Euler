@@ -5,7 +5,7 @@
   * "Please Github, pimp my code !" 
 
 ## Progress  
-  * |1| [Multiples of 3 and 5](Mult.scala)**DONE**
+  * |1| [Multiples of 3 and 5](Mult.scala) **DONE**
   * |2| [	Even Fibonacci numbers](FiboEven.scala) **DONE**
   * |3| [Largest prime factor](MaxPrime.scala) **DONE**
   * |4| [Largest palindrome product](LargestPal.scala) **DONE**
@@ -13,4 +13,5 @@
   * |6| [Sum square difference](SumSquareDiff.scala) **DONE**
   * |7| [10001st prime](FirstsPrime.scala) **DONE**
   * |8| [Largest product in a series](FourAdjDigit.scala) **DONE**
-  * |9| [Special Pythagorean triplet](PythagoreanTriplet.scala) **WORK IN PROGRESS**
+  * |9| [Special Pythagorean triplet](PythagoreanTriplet.scala) **DONE**
+  * |10| [Summation of primes](SumPrimes.scala) **WORK IN PROGRESS**
