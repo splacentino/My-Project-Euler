@@ -14,4 +14,5 @@
   * |7| [10001st prime](FirstsPrime.scala) **DONE**
   * |8| [Largest product in a series](FourAdjDigit.scala) **DONE**
   * |9| [Special Pythagorean triplet](PythagoreanTriplet.scala) **DONE**
-  * |10| [Summation of primes](SumPrimes.scala) **WORK IN PROGRESS**
+  * |10| [Summation of primes](SumPrimes.scala) **DONE**
+  * |11| [Largest product in a grid](GridProduct.scala) **WORK IN PROGRESS**

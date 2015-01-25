@@ -3,29 +3,27 @@ package project.euler
 import scala.annotation.tailrec
 
 object SumPrimes {
-  def main(args : Array[String]) =  
+  def main(args : Array[String]) = {
+
     if (args.length > 0 && args(0).matches("\\d+"))
-      Console println sumPrimes(BigInt(args(0)))
+      Console println sumPrimes(args(0).toLong)
     else
       Console println sumPrimes(10)
+  }
 
-  def sumPrimes(n : BigInt) = {
+  def sumPrimes(n : Long) = {
 
-    @tailrec def primesRec(a: BigInt, primes: List[BigInt]): List[BigInt] =
+    @tailrec def primesRec(a: Long, primes: List[Long]): List[Long] =
       if (a * a >= n) primes
       else if (primes.forall(x => a % x != 0)) primesRec(a + 2, a :: primes)
       else primesRec(a + 2, primes)
 
-    @tailrec def rmPrimesRec(t: BigInt, p: List[BigInt], numbers: List[BigInt]): List[BigInt] = 
-      if (p == Nil) {println(numbers); numbers}
-      else if (t * p.head > numbers.head) rmPrimesRec(2, p.tail, numbers)
-      else rmPrimesRec(t + 1, p, numbers diff List[BigInt](t * p.head))
+      @tailrec def rmPrimesRec(a: Long, primes: List[Long], numbers: List[Long]): List[Long] = 
+        if (a >= n) primes ++ numbers
+        else if (primes.forall(x => a != x && a % x != 0)) rmPrimesRec(a + 2, primes, a :: numbers)
+        else rmPrimesRec(a + 2, primes, numbers)
 
-      if (n % 2 == 0)
-        rmPrimesRec(2, primesRec(3, List[BigInt](2)), ((n - 1) to BigInt(2) by
-          -2).toList ++ List[BigInt](2)).sum
-      else
-        rmPrimesRec(2, primesRec(3, List[BigInt](2)), (n to BigInt(2) by
-          -2).toList ++ List[BigInt](2)).sum
+      if (n > 2) rmPrimesRec(3, primesRec(3, 2 :: Nil), Nil).sum
+      else sys.error("Not any prime factor")
   }
 }
