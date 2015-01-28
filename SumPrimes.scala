@@ -22,19 +22,20 @@ object SumPrimes {
       if (a >= n) primes ++ numbers
       else if (primes.forall(x => a != x && a % x != 0)) keepPrimes(a + 2, primes, a :: numbers)
       else keepPrimes(a + 2, primes, numbers)
-*/
+
+    if (n > 2) keepPrimes(3, primesLs(3, 2 :: Nil), Nil).sum */
+    
     // OR
     
     @tailrec def primesSt(a: Long, primes: Stream[Long]): Stream[Long] =
       if (a * a >= n) primes
-      else if (primes.forall(x => a % x != 0)) primesSt(a + 2, Stream(a) ++ primes)
+      else if (primes.forall(x => a % x != 0)) primesSt(a + 2,a +: primes) 
       else primesSt(a + 2, primes)
     @tailrec def select(a: Long, primes: Stream[Long], numbers: Stream[Long]) : Stream[Long] =
       if (a >= n) primes ++ numbers
       else if (primes.forall(x => a != x && a % x != 0)) select(a + 2, primes, a #:: numbers)
       else select(a + 2, primes, numbers)
 
-    //if (n > 2) keepPrimes(3, primesLs(3, 2 :: Nil), Nil).sum
     if (n > 2) select(3, primesSt(3, Stream(2)), Stream()).sum
     else sys.error("Not any prime factor")
   }
