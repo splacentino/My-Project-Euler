@@ -25,15 +25,15 @@ object GridProduct {
     20 69 36 41 72 30 23 88 34 62 99 69 82 67 59 85 74 04 36 16
     20 73 35 29 78 31 90 01 74 31 49 71 48 86 81 16 23 57 05 54
     01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48""".
-    split("\\s+").toStream.map(x => x.toInt).toList)
+    split("\\s+").toStream.map(x => x.toInt).toList, 13)
 
   }
 
   def gridProduct(numbers: List[Int], max: Int) = {
-  @tailrec def gridProduct(a: Int, row: Int, col: Int, acc: Int) : Int =
+    @tailrec def gridProduct(a: Int,pos: Tuple2[Int,Int], acc: Int)(mv: Tuple2[Int,Int] => Tuple2[Int,Int]) : Int =
     if (a > max) acc
-    else gridProduct(a + 1, row,col, acc + numbers(row + col))
+    else gridProduct(a + 1, mv(pos), acc + numbers(pos._1 + pos._2))(mv)
 
-  3
+
   }
 }
